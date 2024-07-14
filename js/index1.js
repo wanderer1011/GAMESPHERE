@@ -16,7 +16,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const parentDirectory = join(__dirname, '..');
 const saltRounds = 10;
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 const upload = multer({
   limits: {
     fileSize: 100* 1024 * 1024, // For file size
@@ -118,7 +118,7 @@ app.use((req, res, next) => {
 
 
 app.get('/home', async(req, res) => {
-  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 52 AND 56 ORDER BY id ASC`;
+  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 3 AND 8 ORDER BY id DESC`;
     const { rows } = await db.query(trendingQuery);
     if (req.loggedin) {
     const token = req.cookies.auth_token;
@@ -329,7 +329,7 @@ app.post('/search', async (req, res) => {
 
 
 app.get('/trending', async (req, res) => {
-  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 52 AND 56 ORDER BY id ASC`;
+  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 3 AND 7 ORDER BY id ASC`;
   try {
     const { rows: posts } = await db.query(trendingQuery);
     res.render('trending', { loggedin: req.loggedin, posts: posts });
