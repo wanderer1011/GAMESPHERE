@@ -1,0 +1,13 @@
+.slider-img {
+    padding: 0 10px; /* Adjust the 10px as needed to increase or decrease the gap */
+}
+.home-section{
+    display: flex;
+}
+.trending-posts{
+    flex-basis: 70%;
+}
+.top-contributions{
+    flex-basis: 30%;
+}
+

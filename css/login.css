@@ -1,0 +1,31 @@
+.signupbutton{
+    display: flex;
+    justify-content: center;
+}
+.login-background{
+    background-image: url(/Img/login_bg.jpg);
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+}
+
+  .or-with-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .or-with-lines .line {
+    height: 0.4px;
+    width: 50%;
+    background-color: #000; 
+    margin: 0 10px;
+  }
+
+.Forgot-password{
+    padding-bottom: 10px;
+}
+  
+  

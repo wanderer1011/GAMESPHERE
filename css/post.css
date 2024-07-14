@@ -1,0 +1,102 @@
+.post-details-horizontal {
+    display: flex;
+    list-style: none; 
+    padding: 0; 
+}
+  
+.post-details-horizontal li {
+    margin-right: 5px;
+}
+.post-details-horizontal li:not(:first-child)::before{
+    content: "\00B7\20"; 
+}
+.post-box{
+    margin: 10px;
+    display: flex;
+    padding-left: 0px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+.user-icon{
+  padding: 20px;
+  height: 100%;
+  border-right: 1px solid #e1e1e1;
+  background-color: #f2f6f6;
+}
+.profile-icon{
+ display: flex;
+  justify-content: center;
+}
+.post-content {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+}
+.user_name{
+  max-width: 150px;
+  overflow-wrap: break-word;
+}
+
+
+
+
+/* Remove default list styling */
+.replies-list, .replies-list ul {
+  list-style-type: none;
+  padding-left: 30px; /* Adjust as needed for indentation */
+}
+
+.replies-list{
+ padding-left: 10px; 
+}
+
+/* Optional: Add a line to visually connect child comments */
+.replies-list li::before {
+  content: '';
+  position: absolute;
+  left: -10px; /* Adjust based on your padding */
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc; /* Line color */
+}
+
+.replies-list li {
+  position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media print {
+	body {
+		margin: 0 !important;
+	}
+}
+
+.main-container {
+	font-family: 'Lato';
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ck-content {
+	font-family: 'Lato';
+	line-height: 1.6;
+	word-break: break-word;
+}
+
+.editor-container_classic-editor .editor-container__editor {
+	width: 100%;
+}
+.button-container {
+    display: flex;
+    justify-content: center; 
+  }
+  .post-header {
+    display: flex;
+  }
+  
+  .post-header h3 {
+    margin-right: 20px; 
+  }
