@@ -16,7 +16,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const parentDirectory = join(__dirname, '..');
 const saltRounds = 10;
 const app = express();
-const port = process.env.NODE_PORT;
+const port = process.env.PORT || 3000;
 const upload = multer({
   limits: {
     fileSize: 100* 1024 * 1024, // For file size
