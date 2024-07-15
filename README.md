@@ -32,6 +32,6 @@
         <liUse the search bar to find specific topics or posts.</li>
     </ul>
     <h2 id="access">Access</h2>
-    <p>U can acces via the <a href="https://gamesphere-ahm7.onrender.com/home">link</a> or download the project an run it locally. I have used SUPABASE to host my postgreSQL database and Render to host my website.</p>
+    <p>U can acces via the <a href="https://gamesphere-ahm7.onrender.com/home" target="_blank">link</a> or download the project an run it locally. I have used SUPABASE to host my postgreSQL database and Render to host my website.</p>
     
     
