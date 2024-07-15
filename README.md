@@ -1,5 +1,5 @@
  <h1>Gaming Forum Website</h1>
- <p>Welcome to the Gaming Forum Website! This project is created as a part of my application for selection into the Lambda club. It is designed to provide a platform for gamers to discuss games, share tips and tricks, and connect with other gaming enthusiasts.</p>
+ <p>Welcome to the Gaming Forum Website! This project is created as a part of my application for selection into the Lambda club(My college DEV club). It is designed to provide a platform for gamers to discuss games, share tips and tricks, and connect with other gaming enthusiasts. Also this is my first project !</p>
  <h2>Table of Contents</h2>
     <ol>
         <li><a href="#introduction">Introduction</a></li>
