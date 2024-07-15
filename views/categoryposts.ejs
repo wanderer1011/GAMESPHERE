@@ -90,7 +90,13 @@
       </nav>
     </div>
    
-    <div class="container-fluid mt-5">
+    <div class="container mt-5">
+      <div style="display: flex;">
+      <h3 style="padding-right: 10px;">Forum / </h3>
+          <div style="padding-bottom: 10px;">
+            <button class="btn btn-primary category-button"><%= categoryName %></button>
+          </div>
+      </div>    
       <div class="list-group">
         <% posts.forEach(function(post) { %>
           <a href="/post/<%= post.postid %>" class="list-group-item list-group-item-action forum-heading">

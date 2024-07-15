@@ -298,7 +298,7 @@ app.get('/forum/:categoryName', async (req, res) => {
       return { ...post, content: sanitizedContent };
     });
     
-    res.render('categoryposts', { loggedin: req.loggedin, posts: posts });
+    res.render('categoryposts', { loggedin: req.loggedin, posts: posts , categoryName: categoryName});
   } catch (error) {
     console.error('Database error:', error);
     res.status(500).send('Internal Server Error');
