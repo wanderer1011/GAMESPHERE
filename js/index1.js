@@ -88,7 +88,7 @@ const getNestedComments = async (postId) => {
       }));
     };
 
-    const topLevelComments = buildNestedComments(null); // Start with parent_id as null
+    const topLevelComments = buildNestedComments(null); 
     return topLevelComments;
 
   } catch (err) {
