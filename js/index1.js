@@ -9,9 +9,6 @@ import { fileURLToPath } from 'url';
 import 'dotenv/config';
 import cookieparser from 'cookie-parser';
 import multer from 'multer';
-import { JSDOM } from 'jsdom';
-import createDOMPurify from 'dompurify';
-
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const parentDirectory = join(__dirname, '..');
 const saltRounds = 10;
@@ -19,12 +16,10 @@ const app = express();
 const port = process.env.PORT || 3002;
 const upload = multer({
   limits: {
-    fileSize: 100* 1024 * 1024, // For file size
-    fieldSize: 200* 1024 * 1024 // 2MB limit for field values
+    fileSize: 100* 1024 * 1024, 
+    fieldSize: 200* 1024 * 1024 
   }
 });
-const window = new JSDOM('').window;
-const DOMPurify = createDOMPurify(window);
 const db = new pg.Client({
     user: 'postgres.xpnurtaaismyqcelpiqk',
     host: 'aws-0-ap-south-1.pooler.supabase.com',
