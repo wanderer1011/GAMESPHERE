@@ -288,11 +288,6 @@ app.get('/forum/:categoryName', async (req, res) => {
     `;
   try {
     const { rows: posts } = await db.query(postQuery, [categoryName]);
-    const sanitizedPosts = posts.map(post => {
-      const sanitizedContent = DOMPurify.sanitize(post.content);
-      return { ...post, content: sanitizedContent };
-    });
-    
     res.render('categoryposts', { loggedin: req.loggedin, posts: posts , categoryName: categoryName});
   } catch (error) {
     console.error('Database error:', error);
